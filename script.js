@@ -8,6 +8,10 @@ productContainers.forEach((item, i) => {
 
   nxtBtn[i].addEventListener("click", () => {
     item.scrollLeft += containerWidth;
+    console.log( item.scrollLeft);
+    if ( item.scrollLeft===0 ) {
+      
+    }
   });
 
   preBtn[i].addEventListener("click", () => {
@@ -23,11 +27,13 @@ menu_btn.addEventListener("click", function () {
   mobile_menu.classList.remove(".navbar-collapse");
 });
 
+var myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+startCountdown ()
+
 function findJob() {
   const errorJob = document.querySelector(".error-job");
   const errorCat = document.querySelector(".error-cat");
   const errorMsg = document.querySelector(".error-msg");
-
 errorMsg.classList.remove("show-error-msg");
 errorCat.classList.remove("show-error-msg");
 errorJob.classList.remove("show-error-msg"); 
@@ -38,6 +44,7 @@ errorJob.classList.remove("show-error-msg");
   if (loc === "") {
     errorMsg.classList.add("show-error-msg");
     setTimeout(function () {  }, 1000);
+
   }
 
   if  (cat === "") {
@@ -50,16 +57,23 @@ errorJob.classList.remove("show-error-msg");
     setTimeout(function () {  }, 1000);
   } 
 
+
+
    else {
      
   if(job && loc && cat) {
-      window.location.href =
-        "https://www.google.com/search?q=i+am+a+" +
-        job +
-        "+looking+for+a+" +
-        cat +
-        "+position+in+" +
-        loc;
+   
+      myModal.show()
+ timeRre()
+    //    
+    //     "https://www.google.com/search?q=i+am+a+" +
+    //      job +
+    //     "+looking+for+a+" +
+    //     cat +
+    //     "+position+in+" +
+    //     loc;   window.location.href =
+  
     }
   }
 }
+

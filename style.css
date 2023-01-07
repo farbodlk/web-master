@@ -916,8 +916,6 @@ a {
 
 
 
-
-
 @keyframes show-err {
   0% {
     opacity: 0;
@@ -936,7 +934,9 @@ a {
   }
 }
 
-
+.hidden {
+  display: none;
+}
 
 
 
