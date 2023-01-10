@@ -5,6 +5,10 @@ var myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
 const menu_btn = document.querySelector(".berger");
 const mobile_menu = document.querySelector(".nav-animation ");
 const search = {};
+var loc = document.getElementById("Location")
+var cat = document.getElementById("All_Category")
+var job = document.getElementById("Job_Title")
+
 const errorJob = document.querySelector(".error-job");
 const errorCat = document.querySelector(".error-cat");
 const errorMsg = document.querySelector(".error-msg");
@@ -60,9 +64,7 @@ function findJob() {
 
 function delayRedirect(j, c, l) {
   var seconds = 5;
-
   var lblCount = document.getElementById("lblCount");
-
   lblCount.innerHTML = seconds;
 
   page = setInterval(function () {
@@ -82,4 +84,11 @@ function delayRedirect(j, c, l) {
 const myModalEl = document.getElementById("exampleModal");
 myModalEl.addEventListener("hidden.bs.modal", (event) => {
   clearInterval(page);
+});
+
+const selectElement = document.querySelector('.selectpicker');
+
+selectElement.addEventListener('change', (event) => {
+alert()
+
 });
